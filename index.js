@@ -25,3 +25,5 @@ app.put("/api/customers/:id", query.updateById);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports = app;
