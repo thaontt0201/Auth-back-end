@@ -84,7 +84,7 @@ const updateById = (req, res) => {
   res.json(editCustomer);
 };
 //Delete all customers
-const deleteAllCustomers = (req, res) => {
+const deleteAllCustomers = () => {
   db.query("DELETE FROM customer", (err, res) => {
     if (err) {
       return console.error("Error executing query", err.stack);
