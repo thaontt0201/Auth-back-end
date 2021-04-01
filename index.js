@@ -26,6 +26,9 @@ app.put("/api/customers/:id", auth.authentication, query.updateById);
 //Route for authentication
 app.post("/login", auth.login);
 
+//Route for sign up
+app.post("/signup", auth.signup);
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

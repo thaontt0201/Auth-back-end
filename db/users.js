@@ -2,7 +2,7 @@ const db = require("./dbconfig");
 
 //a function to search user by email
 
-//Get user by email
+//Get user by email in database
 const getUserByEmail = (email, next) => {
   const query = {
     text: "SELECT * FROM users WHERE email = $1",
