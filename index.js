@@ -5,8 +5,10 @@ const query = require("./db/customers");
 const app = express();
 app.use(bodyParser.json());
 const auth = require("./services/authenticate");
+const cors = require("cors");
 
-const port = 3000;
+const port = 4000;
+app.use(cors());
 
 //Fetch all the customers
 app.get("/api/customers", auth.authentication, query.getAllCustomers);
